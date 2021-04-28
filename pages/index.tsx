@@ -1,7 +1,11 @@
 import useSwr from 'swr'
 import Link from 'next/link'
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
+
+interface User {
+  id: number
+}
 
 export default function Index() {
   const { data, error } = useSwr('/api/users', fetcher)
@@ -11,7 +15,7 @@ export default function Index() {
 
   return (
     <ul>
-      {data.map((user) => (
+      {data.map((user: User) => (
         <li key={user.id}>
           <Link href="/user/[id]" as={`/user/${user.id}`}>
             <a>{`User ${user.id}`}</a>
