@@ -1,0 +1,18 @@
+# https://prettier.io/docs/en/options.html
+
+# default in v.2.*
+tabWidth: 2
+quoteProps: 'as-needed'
+bracketSpacing: true
+jsxBracketSameLine: false
+arrowParens: 'always'
+proseWrap: 'preserve'
+embeddedLanguageFormatting: 'auto'
+
+# changed
+printWidth: 120
+semi: false
+singleQuote: true
+jsxSingleQuote: true
+trailingComma: 'all'
+endOfLine: 'auto'

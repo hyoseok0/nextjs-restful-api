@@ -1,0 +1,79 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+
+extends:
+  - airbnb
+  - airbnb/hooks
+  - plugin:@typescript-eslint/recommended
+
+  # https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
+  - plugin:prettier/recommended
+  - prettier/@typescript-eslint
+  - prettier/react
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+
+rules:
+  no-underscore-dangle: off
+  no-use-before-define: off
+  no-unused-expressions: off
+  no-return-await: off
+  no-shadow: off
+  no-bitwise: [error, { allow: ['~', '|', '>>', '>>>', '<<', '&'] }]
+  global-require: off
+  consistent-return: off
+  class-methods-use-this: off
+  no-param-reassign: warn
+  camelcase: warn
+  jsx-a11y/anchor-is-valid: off
+  jsx-a11y/anchor-has-content: off
+  jsx-a11y/role-supports-aria-props: off
+  jsx-a11y/click-events-have-key-events: off
+  jsx-a11y/label-has-associated-control: off
+  react/jsx-boolean-value: off
+  react/jsx-filename-extension: [error, { extensions: [.tsx] }]
+  react/react-in-jsx-scope: off
+  react/jsx-props-no-spreading: off
+  react/no-unused-prop-types: warn
+  react/require-default-props: off
+  react-hooks/exhaustive-deps: warn
+  import/no-unresolved: [error, { ignore: [\.scss$] }]
+  import/prefer-default-export: off
+  import/no-dynamic-require: off
+  import/no-extraneous-dependencies: off
+  import/no-cycle: off
+
+  '@typescript-eslint/no-explicit-any': off
+  '@typescript-eslint/explicit-module-boundary-types': off
+  '@typescript-eslint/no-var-requires': off
+  '@typescript-eslint/no-empty-function': off
+  '@typescript-eslint/no-empty-interface': off
+  '@typescript-eslint/ban-types': off
+  '@typescript-eslint/no-unused-vars': [
+    warn,
+    {
+      vars: all,
+      args: none,
+      ignoreRestSiblings: false,
+    },
+  ]
+  '@typescript-eslint/ban-ts-comment': [
+    error, { ts-ignore: allow-with-description }
+  ]
+  import/extensions: [error, never, {
+    scss: always
+  }]
+
+settings: 
+  import/resolver: 
+    node: 
+      extensions: [.ts, .tsx]
+    typescript:
+      project: [tsconfig.json]
+  import/extensions: [.ts, .tsx]
