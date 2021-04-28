@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { LaunchUtil } from '../../../server/services/launch/launch'
+import { LaunchUtil } from 'server/services/launch/launch'
 import { StatusCodes } from 'http-status-codes'
-import { UrlUtil } from '../../../server/util/urlUtil'
+import { UrlUtil } from 'server/util/urlUtil'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { id } = req.query

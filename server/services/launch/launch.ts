@@ -1,4 +1,4 @@
-import { spaceXAxios } from '../../../server/axios'
+import { spaceXAxios } from 'server/axios'
 import { Launch } from './launch.types'
 
 const getAllLaunches = async () => {
