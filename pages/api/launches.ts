@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { LaunchUtil } from 'server/services/launch/launch'
+import { LaunchUtil } from 'server/externalApi/spaceX/launch/launch'
 import { StatusCodes } from 'http-status-codes'
 import { UrlUtil } from 'server/util/urlUtil'
 

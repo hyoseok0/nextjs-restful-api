@@ -1,23 +1,39 @@
-# API routes with REST
+# sample project
 
-Next.js ships with [API routes](https://github.com/vercel/next.js#api-routes), which provide an easy solution to build your own `API`. This example shows how it can be used to create your [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) `API`.
+### 기술스택
+- boiler plate
+  - [NextJS](https://nextjs.org/)
 
-## Deploy your own
+- Client  
+  - [React](https://reactjs.org/)
+  - [PrimeReact](https://www.primefaces.org/primereact/)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- Backend For Frontend Server (BFF)
+  - [NodeJS](https://nodejs.org/ko/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/api-routes-rest&project-name=api-routes-rest&repository-name=api-routes-rest)
+- Client 와 BFF 간 데이터 통신 - restful api
+  - [axios](https://github.com/axios/axios)
 
-## How to use
+- bundler
+  - [webpack](https://webpack.js.org/)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- Continuous Integration
+  - [prettier](https://prettier.io/)
+  - [eslint](https://eslint.org/)
 
-```bash
-npx create-next-app --example api-routes-rest api-routes-rest-app
-# or
-yarn create next-app --example api-routes-rest api-routes-rest-app
-```
+- language
+  - [Typescript](https://www.typescriptlang.org/)
 
-### Deploy to Vercel
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### directory 구성
+- components : React component
+- pages : [페이지 React component](https://nextjs.org/docs/basic-features/pages), [api](https://nextjs.org/docs/api-routes/introduction)
+- server : BFF 의 api 사용 파일
+   - externalAPI 
+     - 외부 API 연동 로직
+     - 디렉토리 구조
+       - 1depth : API 제공 주체(ex - 조직, domain)
+       - 2depth : API 종류(ex - path prefix)
+   - util : 공통 util
+- share : client 와 server 간 공통 로직
+   - type : typescript 에서 사용되는 type
+- style : style     
