@@ -1,5 +1,9 @@
 # sample project
 
+### 시작 script
+`yarn && yarn dev`
+- https://nextjs.org/docs/api-reference/cli#development
+
 ### 기술스택
 - boiler plate
   - [NextJS](https://nextjs.org/)
