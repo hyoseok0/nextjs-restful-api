@@ -1,14 +1,14 @@
-import { isString, isArray } from 'lodash'
+import TypeChecker from 'share/util/typeChecker'
 
 const getOrElse = (
   queryParam?: string | string[],
   getIfUndefined = (): string => '',
   getIfArray = (arr: string[]): string => arr.join(','),
 ): string => {
-  if (isString(queryParam)) {
+  if (TypeChecker.isString(queryParam)) {
     return queryParam
   }
-  if (isArray(queryParam)) {
+  if (TypeChecker.isArray(queryParam)) {
     return getIfArray(queryParam)
   }
   return getIfUndefined()
