@@ -40,4 +40,9 @@
    - util : 공통 util
 - share : client 와 server 간 공통 로직
    - type : typescript 에서 사용되는 type
-- style : style     
+- style : style    
+
+---
+### base 
+https://github.com/vercel/next.js/tree/canary/examples/api-routes-rest
+
